@@ -1,4 +1,5 @@
 import { Col, Container, Row, Form } from "react-bootstrap";
+import MyPlayer from "./MyPlayer";
 import mowgli from "../assets/images/mowgli.jpg";
 
 const MusicPlayer = () => {
@@ -33,31 +34,8 @@ const MusicPlayer = () => {
             </div>
           </Col>
 
-          <Col
-            xs={12}
-            md={6}
-            className="d-flex justify-content-center align-items-center gap-4 text-white"
-          >
-            <i
-              className="bi bi-shuffle text-secondary fs-6 d-none d-md-block"
-              style={{ cursor: "pointer" }}
-            ></i>
-            <i
-              className="bi bi-skip-start-fill fs-4 cursor-pointer"
-              style={{ cursor: "pointer" }}
-            ></i>
-            <i
-              className="bi bi-play-fill fs-1 cursor-pointer"
-              style={{ cursor: "pointer" }}
-            ></i>
-            <i
-              className="bi bi-skip-end-fill fs-4 cursor-pointer"
-              style={{ cursor: "pointer" }}
-            ></i>
-            <i
-              className="bi bi-repeat text-secondary fs-6 d-none d-md-block"
-              style={{ cursor: "pointer" }}
-            ></i>
+          <Col xs={12} md={6} className="d-flex justify-content-center">
+            <MyPlayer />
           </Col>
 
           <Col
