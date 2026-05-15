@@ -21,6 +21,7 @@ import img6 from "./assets/images/2c.png";
 import img7 from "./assets/images/2d.png";
 import img8 from "./assets/images/2e.png";
 import img9 from "./assets/images/2f.png";
+import MusicPlayer from "./components/MusicPlayer";
 
 function App() {
   return (
@@ -29,14 +30,15 @@ function App() {
       style={{ backgroundColor: "rgba(31, 31, 31)" }}
     >
       <SidebarDesktop />
-
-      <div className="flex-grow-1 d-flex flex-column">
+      <div
+        className="flex-grow-1 d-flex flex-column pb-5"
+        style={{ paddingBottom: "100px" }}
+      >
         <TopNavbarMobile />
         <PlayerDesktop />
 
         <main className="p-0">
           <H1 />
-
           <Container fluid className="mb-3">
             <Row>
               <SingleCard
@@ -44,7 +46,6 @@ function App() {
                 subTitle="Rilassati, al resto pensiamo noi!"
                 img={img1}
               />
-
               <SingleCard
                 mainTitle="Nuova Stazione Radio"
                 subTitle="Ecco la nuova casa della musica latina!"
@@ -52,7 +53,6 @@ function App() {
               />
             </Row>
           </Container>
-
           <Container>
             <Row className="g-3">
               <PlayListTitle title="Nuovi episodi radio" />
@@ -64,21 +64,19 @@ function App() {
               <PlayListCard img={img9} />
             </Row>
           </Container>
-
           <Container>
             <Row>
               <NuoveUscite />
             </Row>
           </Container>
-
           <Container>
             <Row className="g-3">
               <PlayListTitle title="Altro da esplorare" />
               <Altro />
             </Row>
           </Container>
-
           <Footer />
+          <MusicPlayer />
         </main>
       </div>
     </div>
